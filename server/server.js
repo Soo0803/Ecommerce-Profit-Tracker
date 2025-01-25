@@ -12,9 +12,9 @@ const PORT = process.env.PORT || 5001;
 app.use(cors());
 app.use(express.json());
 
-// Test Route
-app.get('/', (req, res) => {
-  res.send('Backend is running!');
+// Example API endpoint
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'message from the backend!' });
 });
 
 // Start the Server
