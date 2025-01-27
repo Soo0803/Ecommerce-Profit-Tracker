@@ -14,7 +14,10 @@ app.use(express.json());
 
 // Example API endpoint
 app.get('/api/data', (req, res) => {
-  res.json({ message: 'message from the backend!' });
+  res.json([
+    { "id": 1, "name": "Amazon", "sales": 1000, "profit": 200, "isConnected": true },
+    { "id": 2, "name": "Etsy", "sales": 500, "profit": 120, "isConnected": true }
+    ]);
 });
 
 // Start the Server
